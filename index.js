@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
@@ -5,7 +6,7 @@ const sleep = () => new Promise((resolve) => setTimeout(resolve, 2000));
 async function welcomeScreen() {
     let title = chalkAnimation.rainbow(`
     =======================================================================
-    >>>>>>>>>>>>>>>>>>>>>>>>> CURRENCY CONVERTER <<<<<<<<<<<<<<<<<<<<<<<<<<
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Word Counter <<<<<<<<<<<<<<<<<<<<<<<<<<
     =======================================================================
     `);
     await sleep();
@@ -28,13 +29,3 @@ async function main() {
     console.log(`\nparagraph Words:${chalk.red(words.length)} and paragraph characters:${chalk.green(characters.length)}`);
 }
 await main();
-// import inquirer from "inquirer";
-// const anwser=await inquirer.prompt([
-//     {
-//         type:"input",
-//         name:"para",
-//         message:"enter a paragraph"
-//     }
-// ]);
-// let words=anwser.para.trim().split(" ");
-// console.log(`your sentence is ${words.length} consits words`);
